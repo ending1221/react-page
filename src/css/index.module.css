@@ -1,0 +1,45 @@
+.card {
+    min-height: 200px;
+    /* background-color: blueviolet; */
+    padding: 0 2rem;
+  }
+  .nav__box {
+    width: 100%;
+    /* padding-left: 1.5rem; */
+  }
+  .nav__btn {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0.5rem;
+    min-width: 5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .nav__btn__link {
+    color: #444;
+    text-decoration: none;
+    transition: 0.25s;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .nav__btn__link:hover,
+  .nav__btn__link:focus {
+    color: #999;
+    opacity: 0.9;
+  }
+  
+  .alert {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(black, 0.8);
+    z-index: 100;
+  }
+  
+  .displayNone {
+    display: none;
+  }
+  

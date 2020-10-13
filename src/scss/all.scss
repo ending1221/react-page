@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif, "微軟正黑體";
+  }
+  body {
+    background-color:  white;
+    color: #444;
+  }
+  h1 {
+    text-align: center;
+  }
+  ul {
+    list-style:none;
+    padding: 0;
+  }
+  li {
+    list-style:none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  input, select {
+    padding: .15rem;
+  }
+  
+  hr {
+    margin: 1.25rem 0;
+  }
+  
+  p {
+    font-size: .75rem;
+  }
+  
+  .warr {
+    position: relative;
+  }
