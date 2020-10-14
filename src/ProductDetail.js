@@ -19,7 +19,7 @@ function Detail(props) {
     const { name, price, promote_price, src, variant } = thisProduct;
     const { addOrder } = props;
     return (
-      <div className={style.detail}>
+      <section className={style.detail}>
         <img src={require(`${src}`)} alt={name} />
         <div className={style.detail__text}>
           <h4 className={style.detail__text__title}>{name}</h4>
@@ -53,7 +53,7 @@ function Detail(props) {
             <span>※布料混紗/印花些微印刷不均/斑駁，屬正常現象，非瑕疵狀況</span>
           </span>
         </div>
-      </div>
+      </section>
     );
   } else {
     return <div className={style.none}>查無此商品</div>;

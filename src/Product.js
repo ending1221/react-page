@@ -57,10 +57,14 @@ class Product extends Component {
     this.sortEvent(filterList);
 
     return (
-      <div className={style.products}>
+      <section className={style.products}>
         <label>
           <FontAwesomeIcon icon={faSearch} />
-          <input value={inputValue} placeholder="SEARCH" onChange={this.onChangeEvent} />
+          <input
+            value={inputValue}
+            placeholder="SEARCH"
+            onChange={this.onChangeEvent}
+          />
         </label>
         <label> 排序 </label>
         <select value={sort} onChange={this.onSortChangeEvent}>
@@ -80,7 +84,7 @@ class Product extends Component {
             ({ name, id, price, promote_price, src, variant }, index) => {
               return (
                 <li className={style.card} key={index}>
-                  <Link to={`/p/${id}`}>
+                  <Link to={`/product/${id}`}>
                     <img src={require(`${src}`)} alt={name} />
                   </Link>
 
@@ -105,7 +109,7 @@ class Product extends Component {
           )}
           {filterList.length === 0 ? "很抱歉! 沒有找到相關商品" : null}
         </ul>
-      </div>
+      </section>
     );
   }
 }

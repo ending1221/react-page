@@ -18,7 +18,7 @@ class Cart extends Component {
     const rate = totalAmount === 0 ? 0 : totalAmount >= 1000 ? 0 : 70;
 
     return (
-      <div className={style.cart}>
+      <section className={style.cart}>
         <h3>Shopping Bag</h3>
         <hr />
         {orders.length !== 0 ? (
@@ -26,7 +26,7 @@ class Cart extends Component {
             ({ name, id, src, count, promote_price, variant }, index) => {
               return (
                 <div className={style.product} key={index}>
-                  <img src={require(`${src}`)} alt={name} />
+                  <img src={require(`${src}`)} />
                   <div className={style.product__main}>
                     <h4 className={style.card__title}>{name}</h4>
                     <span>{"NT: " + promote_price}</span>
@@ -65,7 +65,7 @@ class Cart extends Component {
         <div className={style.btn} onClick={handlePay.bind(this)}>
           結帳
         </div>
-      </div>
+      </section>
     );
   }
 }

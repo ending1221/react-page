@@ -103,30 +103,36 @@ const App = () => {
   return (
     <Router>
       <div className="section">
-        <ul className={style.nav__box}>
-          <li className={style.nav__btn}>
-            <Link to="/" className={style.nav__btn__link}>
-              首頁
-            </Link>
-          </li>
-          <li className={style.nav__btn}>
-            <Link to="/product" className={style.nav__btn__link}>
-              產品頁
-            </Link>
-          </li>
-          <li className={style.nav__btn}>
-            <Link to="/cart" className={style.nav__btn__link}>
-              購物車({ordersLength})
-            </Link>
-          </li>
-        </ul>
+        <div className={style.nav}>
+          <p className={style.announcement}>
+            歡迎來到 Yau shop ! 此網頁為 React.js 練習作品 圖源均來自
+            <a href="https://www.ajpeace.com.tw/">《ajpeace官方網站》</a>
+          </p>
+          <ul className={style.nav__box}>
+            <li className={style.nav__btn}>
+              <Link to="/" className={style.nav__btn__link}>
+                首頁
+              </Link>
+            </li>
+            <li className={style.nav__btn}>
+              <Link to="/products" className={style.nav__btn__link}>
+                新品上市
+              </Link>
+            </li>
+            <li className={style.nav__cart}>
+              <Link to="/cart" className={style.nav__btn__link}>
+                購物車({ordersLength})
+              </Link>
+            </li>
+          </ul>
+        </div>
 
         {/* {payBox ? <Modal payEvent={payEvent} /> : null} */}
         <Switch>
-          <Route path="/product">
+          <Route path="/products">
             <Product addOrder={addOrder} />
           </Route>
-          <Route path="/p/:id">
+          <Route path="/product/:id">
             <Detail addOrder={addOrder} />
           </Route>
           <Route path="/cart">
