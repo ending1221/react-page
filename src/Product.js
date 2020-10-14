@@ -60,7 +60,7 @@ class Product extends Component {
       <div className={style.products}>
         <label>
           <FontAwesomeIcon icon={faSearch} />
-          <input value={inputValue} onChange={this.onChangeEvent} />
+          <input value={inputValue} placeholder="SEARCH" onChange={this.onChangeEvent} />
         </label>
         <label> 排序 </label>
         <select value={sort} onChange={this.onSortChangeEvent}>
