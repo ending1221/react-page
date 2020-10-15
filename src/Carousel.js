@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./css/carousel.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,16 +12,28 @@ const Carousel = () => {
   const carouselArr = arr.map((item) => {
     return "./img/index-0" + item + ".jpg";
   });
+  const length = carouselArr.length - 1;
 
+  const checkPage = (index) => {
+    if (index > length) setPage(0);
+    else if (index < 0) setPage(length);
+    else setPage(index);
+  };
   const changeImgIndex = (type) => {
-    let length = carouselArr.length - 1;
     const num = type === "next" ? +1 : -1;
     const nowIndex = page + num;
 
-    if (nowIndex > length) setPage(0);
-    else if (nowIndex < 0) setPage(length);
-    else setPage(nowIndex);
+    checkPage(nowIndex);
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const nowIndex = page + 1;
+      checkPage(nowIndex);
+    }, 2500);
+
+    return () => clearInterval(timer);
+  }, [page]);
 
   return (
     <div className={style.carousel}>
