@@ -6,6 +6,11 @@ button {
   padding: 0.75rem 2rem;
   position: relative;
 }
+
+.cart h3 {
+  margin-top: 7.5rem;
+}
+
 .btn {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
