@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "./data/products.json";
-import style from "./css/ProductDetail.module.css";
+import style from "./css/productDetail.module.css";
 
 function Detail(props) {
   const [count, setCount] = useState(1);

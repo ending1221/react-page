@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import style from "./css/Alert.module.css";
+import style from "./css/alert.module.css";
 
 class Alert extends Component {
   render() {

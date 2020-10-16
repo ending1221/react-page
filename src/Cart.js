@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import style from "./css/Cart.module.css";
+import style from "./css/cart.module.css";
 
 class Cart extends Component {
   state = {
