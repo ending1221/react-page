@@ -49,8 +49,19 @@
 }
 .nav__cart {
   position: absolute;
-  margin-right: 2rem;
+  margin-right: 2.5rem;
   right: 0;
+}
+.nav__cart:hover {
+  opacity: 0.8;
+}
+
+.nav__cart img {
+  width: 40px;
+  position: absolute;
+  top: -80%;
+  right: -175%;
+  opacity: 0.9;
 }
 
 .nav__btn__link {

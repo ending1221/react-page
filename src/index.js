@@ -16,6 +16,8 @@ import Detail from "./ProductDetail";
 
 import products from "./data/products.json";
 
+import cartImg from "./img/order.png";
+
 const App = () => {
   const [orders, setOrders] = React.useState([]);
   const [ordersLength, setOrdersLength] = React.useState(0);
@@ -144,7 +146,8 @@ const App = () => {
             </li>
             <li className={style.nav__cart}>
               <Link to="/cart" className={style.nav__btn__link}>
-                購物車({ordersLength})
+                <img src={cartImg} alt="cart" />
+                {ordersLength}
               </Link>
             </li>
           </ul>
