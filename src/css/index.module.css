@@ -48,6 +48,7 @@
   text-align: center;
 }
 .nav__cart {
+  font-size: 0.7rem;
   position: absolute;
   margin-right: 2.5rem;
   right: 0;
@@ -59,7 +60,7 @@
 .nav__cart img {
   width: 40px;
   position: absolute;
-  top: -80%;
+  top: -95%;
   right: -175%;
   opacity: 0.9;
 }
