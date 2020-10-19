@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 import "./scss/all.scss";
 import style from "./css/index.module.css";
 
@@ -19,17 +22,16 @@ const App = () => {
   const [canel, setCanel] = React.useState(false);
   const [deleteIndex, setDeleteIndex] = React.useState(null);
   const [pay, setPay] = React.useState(false);
+  const [scrollTop, setScrollTop] = React.useState(false);
 
   const checkNoRepeat = (id) => {
     return orders.filter((r) => r.id === id).length === 0;
   };
 
   const addOrder = (id, count = 1) => {
-    console.log(id);
     const newProduct = checkNoRepeat(id);
     const nowProduct = products.find((product) => product.id === id);
     let newOrders = [...orders];
-    console.log(nowProduct);
     if (newProduct) {
       nowProduct["count"] = count;
       newOrders.push(nowProduct);
@@ -43,8 +45,6 @@ const App = () => {
     }
     setOrders(newOrders);
     setOrdersLength(ordersLength + count);
-    console.log("orders", orders);
-    console.log("ordersLength", ordersLength);
   };
 
   const deleteOrder = (index) => {
@@ -99,10 +99,33 @@ const App = () => {
   const handleCanel = (state) => {
     setCanel(state);
   };
+  const scrollEvent = () => {
+    window.addEventListener("scroll", function (e) {
+      var sr = document.documentElement.scrollTop;
+      if (sr > 500) {
+        setScrollTop(true);
+      } else {
+        setScrollTop(false);
+      }
+    });
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+  scrollEvent();
 
   return (
     <Router>
       <div className="section">
+        <button
+          className={scrollTop ? style.scrollTop : style.displayNone}
+          onClick={scrollToTop}
+        >
+          <FontAwesomeIcon icon={faChevronUp} />
+        </button>
         <div className={style.nav}>
           <p className={style.announcement}>
             歡迎來到 Yau shop ! 此網頁為 React.js 練習作品 圖源均來自
