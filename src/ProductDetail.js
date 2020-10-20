@@ -22,16 +22,20 @@ function Detail(props) {
       <section className={style.detail}>
         <img src={require(`${src}`)} alt={name} />
         <div className={style.detail__text}>
+          <hr />
+          <span>{id}</span>
           <h4 className={style.detail__text__title}>{name}</h4>
+          <p>♡全館商品滿千免運♡</p>
           <div className={style.prices}>
             <span className={style.detail__text__promotePrice}>
               {"NT" + promote_price}
             </span>
             <span className={style.detail__text__price}>{"NT" + price}</span>
           </div>
-          <span>Color: {variant}</span>
+          <span>COLOR: {variant}</span>
+          <hr />
           <div>
-            <span>Quantity : </span>
+            <span>QUANTITY : </span>
             <button onClick={() => countEvent("less")}>-</button>
             <span className={style.count}>{count}</span>
             <button onClick={() => countEvent("add")}>+</button>
@@ -42,15 +46,15 @@ function Detail(props) {
           <span className={style.description}>
             <span>商品描述</span>
             <hr />
-            <span>產地/中國</span>
-            <span>口袋/無</span>
-            <span>內裡/無</span>
-            <span>彈性/無</span>
-            <span>材質/棉+聚脂纖維</span>
-            <span>商品長度/略長</span>
-            <span>商品版型/偏大</span>
-            <span>商品厚薄/偏薄</span>
-            <span>※布料混紗/印花些微印刷不均/斑駁，屬正常現象，非瑕疵狀況</span>
+            <span>產地 / 中國</span>
+            <span>口袋 / 無</span>
+            <span>內裡 / 無</span>
+            <span>彈性 / 無</span>
+            <span>材質 / 棉+聚脂纖維</span>
+            <span>商品長度 / 略長</span>
+            <span>商品版型 / 偏大</span>
+            <span>商品厚薄 / 偏薄</span>
+            <span>※布料混紗 / 印花些微印刷不均 / 斑駁，屬正常現象，非瑕疵狀況</span>
           </span>
         </div>
       </section>
