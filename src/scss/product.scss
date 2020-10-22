@@ -75,3 +75,26 @@
         }
     }
 }
+
+
+@media(max-width: 768px){
+    .products {
+      span {
+        font-size: 1rem;
+      }
+      .card {
+        flex: 80vw;
+        img {
+          max-width: 80vw; 
+        }
+        &__title {
+          font-size: 1rem;
+          margin-bottom: .5rem;
+        }
+      }
+      .addCart {
+        margin-top: .5rem;
+        transform: scale(1);
+      }
+    }
+  }
