@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import style from "./css/product.module.css";
+import "./scss/product.scss";
 
 import products from "./data/products.json";
 
@@ -57,7 +57,7 @@ class Product extends Component {
     this.sortEvent(filterList);
 
     return (
-      <section className={style.products}>
+      <section className="products">
         <label>
           <FontAwesomeIcon icon={faSearch} />
           <input
@@ -74,31 +74,25 @@ class Product extends Component {
             </option>
           ))}
         </select>
-        <img
-          className={style.banner}
-          src={require("./img/ndis.jpg")}
-          alt="Banner"
-        />
+        <img className="banner" src={require("./img/ndis.jpg")} alt="Banner" />
         <ul>
           {filterList.map(
             ({ name, id, price, promote_price, src, variant }, index) => {
               return (
-                <li className={style.card} key={index}>
+                <li className="card" key={index}>
                   <Link to={`/product/${id}`}>
                     <img src={require(`${src}`)} alt={name} />
                   </Link>
 
-                  <h4 className={style.card__title}>
-                    {name + " / " + variant}
-                  </h4>
+                  <h4 className="card__title">{name + " / " + variant}</h4>
                   <div>
-                    <span className={style.card__price}>{"NT" + price}</span>
-                    <span className={style.card__promotePrice}>
+                    <span className="card__price">{"NT" + price}</span>
+                    <span className="card__promotePrice">
                       {"NT" + promote_price}
                     </span>
                   </div>
                   <button
-                    className={style.addCart}
+                    className="addCart"
                     onClick={addOrder.bind(this, id, 1)}
                   >
                     加入購物車

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import style from "./css/cart.module.css";
+import "./scss/cart.scss";
 
 class Cart extends Component {
   state = {
@@ -18,17 +18,17 @@ class Cart extends Component {
     const rate = totalAmount === 0 ? 0 : totalAmount >= 1000 ? 0 : 70;
 
     return (
-      <section className={style.cart}>
+      <section className="cart">
         <h3>Shopping Bag</h3>
         <hr />
         {orders.length !== 0 ? (
           orders.map(
             ({ name, id, src, count, promote_price, variant }, index) => {
               return (
-                <div className={style.product} key={index}>
-                  <img src={require(`${src}`)} />
-                  <div className={style.product__main}>
-                    <h4 className={style.card__title}>{name}</h4>
+                <div className="product" key={index}>
+                  <img src={require(`${src}`)} alt={name} />
+                  <div className="product__main">
+                    <h4 className="card__title">{name}</h4>
                     <span>{"NT: " + promote_price}</span>
                     <span>Color: {variant}</span>
                     <div>
@@ -38,7 +38,7 @@ class Cart extends Component {
                       >
                         -
                       </button>
-                      <span className={style.count}>{count}</span>
+                      <span className="count">{count}</span>
                       <button
                         onClick={changeCount.bind(this, "add", id, index)}
                       >
@@ -51,7 +51,7 @@ class Cart extends Component {
             }
           )
         ) : (
-          <span className={style.emptyCard}>您的購物車為空!</span>
+          <span className="emptyCard">您的購物車為空!</span>
         )}
 
         <div>
@@ -62,7 +62,7 @@ class Cart extends Component {
         <p>運費: NT {rate} (全館商品滿千免運)</p>
         <hr />
         <p>消費總額: NT {rate + totalAmount}</p>
-        <div className={style.btn} onClick={handlePay.bind(this)}>
+        <div className="btn" onClick={handlePay.bind(this)}>
           結帳
         </div>
       </section>

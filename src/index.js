@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-import "./scss/all.scss";
-import style from "./css/index.module.css";
+import "./scss/layout.scss";
+import "./scss/index.scss";
 
 import Home from "./Home";
 import Product from "./Product";
@@ -123,29 +123,29 @@ const App = () => {
     <Router>
       <div className="section">
         <button
-          className={scrollTop ? style.scrollTop : style.displayNone}
+          className={scrollTop ? "scrollTop" : "displayNone"}
           onClick={scrollToTop}
         >
           <FontAwesomeIcon icon={faChevronUp} />
         </button>
-        <div className={style.nav}>
-          <p className={style.announcement}>
+        <div className="nav">
+          <p className="announcement">
             歡迎來到 Yau shop ! 此網頁為 React.js 練習作品 圖源均來自
             <a href="https://www.ajpeace.com.tw/">《ajpeace官方網站》</a>
           </p>
-          <ul className={style.nav__box}>
-            <li className={style.nav__btn}>
-              <Link to="/" className={style.nav__btn__link}>
+          <ul className="nav__box">
+            <li className="nav__btn">
+              <Link to="/" className="nav__btn__link">
                 首頁
               </Link>
             </li>
-            <li className={style.nav__btn}>
-              <Link to="/products" className={style.nav__btn__link}>
+            <li className="nav__btn">
+              <Link to="/products" className="nav__btn__link">
                 新品上市
               </Link>
             </li>
-            <li className={style.nav__cart}>
-              <Link to="/cart" className={style.nav__btn__link}>
+            <li className="nav__cart">
+              <Link to="/cart" className="nav__btn__link">
                 <img src={cartImg} alt="cart" />
                 {ordersLength}
               </Link>

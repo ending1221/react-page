@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import style from "./css/carousel.module.css";
+import "./scss/carousel.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
@@ -12,50 +12,45 @@ const Carousel = () => {
   const carouselArr = arr.map((item) => {
     return "./img/index-0" + item + ".jpg";
   });
-  const length = carouselArr.length - 1;
+  const length = carouselArr.length;
 
-  const checkPage = (index) => {
-    if (index > length) setPage(0);
-    else if (index < 0) setPage(length);
-    else setPage(index);
-  };
   const changeImgIndex = (type) => {
     const num = type === "next" ? +1 : -1;
     const nowIndex = page + num;
-
-    checkPage(nowIndex);
+    const newIndex = nowIndex % length === -1 ? 5 : nowIndex % length;
+    setPage(newIndex);
   };
 
   useEffect(() => {
     const timer = setInterval(() => {
       const nowIndex = page + 1;
-      checkPage(nowIndex);
+      setPage(nowIndex % length);
     }, 2500);
 
     return () => clearInterval(timer);
   }, [page]);
 
   return (
-    <div className={style.carousel}>
+    <div className="carousel">
       <button
-        className={style.control}
+        className="control"
         data-slide="prev"
         onClick={() => changeImgIndex("prev")}
       >
-        <FontAwesomeIcon className={style.controlItem} icon={faChevronLeft} />
+        <FontAwesomeIcon className="controlItem" icon={faChevronLeft} />
       </button>
       <button
-        className={style.control}
+        className="control"
         data-slide="next"
         onClick={() => changeImgIndex("next")}
       >
-        <FontAwesomeIcon className={style.controlItem} icon={faChevronRight} />
+        <FontAwesomeIcon className="controlItem" icon={faChevronRight} />
       </button>
-      <div className={style.carouselInner}>
+      <div className="carouselInner">
         {carouselArr.map((item, i) => {
           return (
             <div
-              className={style.carouselItem}
+              className="carouselItem"
               key={i}
               style={{ left: `-${page * 100}%` }}
             >
