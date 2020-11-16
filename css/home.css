@@ -81,10 +81,10 @@
         flex-wrap: wrap;
   }
   .home .section_1 :nth-child(1) {
-    width: 85%;
+    width: 95%;
   }
   .home .section_1 :nth-child(2) {
-    width: 85%;
+    width: 95%;
     margin-left: 0;
   }
   .home .section_2 {
@@ -98,7 +98,7 @@
             align-items: center;
   }
   .home .section_2 img {
-    width: 85%;
+    width: 95%;
   }
 }
 /*# sourceMappingURL=home.css.map */
