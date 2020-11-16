@@ -1,0 +1,73 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato", sans-serif, "微軟正黑體";
+}
+
+body {
+  background-color: white;
+  color: #444;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, select {
+  padding: .15rem;
+}
+
+hr {
+  margin: 1.25rem 0;
+  border: none;
+  border-top: 1px solid #444;
+  opacity: 0.8;
+}
+
+p, span {
+  font-size: .75rem;
+}
+
+.section {
+  position: relative;
+  margin-top: -1rem;
+}
+
+button {
+  margin-top: 0.25rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  border: 1px solid #444;
+}
+/*# sourceMappingURL=layout.css.map */

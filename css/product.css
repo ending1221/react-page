@@ -1,0 +1,115 @@
+.products {
+  padding: 1rem 2rem;
+  width: 100%;
+  padding-top: 8rem;
+}
+
+.products ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products h4 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+
+.products span {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.products input {
+  margin: 0 1rem 0 0.25rem;
+}
+
+.products .addCart {
+  font-size: 0.25rem;
+  color: #e8e6e3;
+  background-color: #33373a;
+  padding: 0.5rem 2rem;
+  margin: 0.25rem;
+  border: none;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.products .banner {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.products .card {
+  margin: 0.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+}
+
+.products .card img {
+  max-width: 25vw;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.products .card img:hover, .products .card img:focus {
+  text-decoration: none;
+  outline: none;
+  opacity: 0.8;
+  color: #999999;
+}
+
+.products .card__title {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.25rem;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  letter-spacing: 0.5px;
+}
+
+.products .card__title:hover, .products .card__title:focus {
+  text-decoration: none;
+  outline: none;
+  opacity: 0.8;
+  color: #999999;
+}
+
+.products .card__price {
+  text-decoration: line-through;
+  margin-right: 1rem;
+}
+
+.products .card__promotePrice {
+  color: #c00000;
+}
+
+@media (max-width: 768px) {
+  .products span {
+    font-size: 1rem;
+  }
+  .products .card {
+    -webkit-box-flex: 80vw;
+        -ms-flex: 80vw;
+            flex: 80vw;
+  }
+  .products .card img {
+    max-width: 80vw;
+  }
+  .products .card__title {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+  }
+  .products .addCart {
+    margin-top: .5rem;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=product.css.map */

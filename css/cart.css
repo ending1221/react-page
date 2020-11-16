@@ -1,0 +1,77 @@
+.cart {
+  padding: 0.75rem 2rem;
+  position: relative;
+}
+
+.cart button {
+  border: 1px solid transparent;
+}
+
+.cart h3 {
+  margin-top: 7.5rem;
+}
+
+.cart h4 {
+  margin-bottom: .5rem;
+}
+
+.cart .btn {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #444;
+  color: white;
+  padding: 0.5rem 3.5rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.8rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.cart .btn:hover {
+  opacity: 0.9;
+}
+
+.cart .product {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cart .product img {
+  width: 20vw;
+  margin-right: 1rem;
+}
+
+.cart .product__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cart .count {
+  padding: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: #444 solid 1px;
+}
+
+.cart .emptyCard {
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .cart .product img {
+    width: auto;
+    height: 40vw;
+  }
+}
+/*# sourceMappingURL=cart.css.map */
